@@ -76,7 +76,7 @@ def item2main(
     if "issue" in pub_data:
         citation_dict["issue"] = pub_data["issue"]
 
-    if "pages" in pub_data:
+    if "pages" in pub_data and len(pub_data["pages"]>0):
         citation_dict["page"] = pub_data["pages"]
     
     if "extra" in pub_data:

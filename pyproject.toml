@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "zotero2qmd"
+version = "0.1.0"
+description = "Convert entries from pyzotero to qmd files"
+authors = ["JoFrhwld <JoFrhwld@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "zotero2qmd", from="src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyzotero = "^1.5.18"
+pyaml = "^23.9.7"
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

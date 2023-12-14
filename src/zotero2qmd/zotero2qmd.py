@@ -110,7 +110,7 @@ def item2main(
         citation_dict["container-title"] = get_container(pub_data)
     
     if "versionNumber" in pub_data:
-        citation_dict["version"] = pub_data["version"]
+        citation_dict["version"] = pub_data["versionNumber"]
         
     main_dict["description"] = get_container(pub_data)
 

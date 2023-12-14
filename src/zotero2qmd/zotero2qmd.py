@@ -67,6 +67,8 @@ def item2main(
     main_dict = {}
     citation_dict = {}
 
+    main_dict["params"] = {"key" : pub_data["key"]}
+
     citation_dict["type"] = zotero_to_csl[pub_data["itemType"]]
     
     if "volume" in pub_data:
@@ -82,7 +84,9 @@ def item2main(
         citation_dict["page"] = pub_data["pages"]
     
     if "extra" in pub_data:
-        main_dict["params"] = {"notes" : pub_data["extra"]}
+        main_dict["params"]["notes"] = pub_data["extra"]
+    
+
 
 
     authors = make_authors(pub_data)

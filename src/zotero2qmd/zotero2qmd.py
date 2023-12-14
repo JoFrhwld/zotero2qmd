@@ -46,6 +46,8 @@ def make_file_path(base_path, main_dict):
 
 
 def get_container(item):
+    if "versionNumber" in item:
+        return item["versionNumber"]
     if "publicationTitle" in item:
         return item["publicationTitle"]
     if "proceedingsTitle" in item:
@@ -104,7 +106,9 @@ def item2main(
     if "url" in pub_data:
         citation_dict["url"] = pub_data["url"]
     
-    citation_dict["container-title"] = get_container(pub_data)
+    if "versionNumber" not in pub_data:
+        citation_dict["container-title"] = get_container(pub_data)
+        
     main_dict["description"] = get_container(pub_data)
 
     if "abstractNote" in pub_data:

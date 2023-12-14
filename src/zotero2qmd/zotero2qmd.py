@@ -108,6 +108,9 @@ def item2main(
     
     if "versionNumber" not in pub_data:
         citation_dict["container-title"] = get_container(pub_data)
+    
+    if "versionNumber" in pub_data:
+        citation_dict["version"] = pub_data["version"]
         
     main_dict["description"] = get_container(pub_data)
 

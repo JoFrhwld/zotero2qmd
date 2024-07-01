@@ -3,5 +3,7 @@ zotero_to_csl = {
     "conferencePaper": "paper-conference",
     "bookSection": "chapter",
     "thesis": "thesis",
-    "computerProgram": "software"
+    "computerProgram": "software",
+    "dataset": "software",
+    "dataset": "dataset"
 }
